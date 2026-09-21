@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luxury Beauty & Fragrance Collection</title>
+<style>
+  :root {
+    --bg: #0c0c0e;
+    --bg-card: #16161a;
+    --bg-card-hover: #1c1c21;
+    --gold: #c9a962;
+    --gold-light: #e6c883;
+    --text: #f2efe9;
+    --text-muted: #a8a29a;
+    --border: #2a2a30;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Georgia", "Times New Roman", serif;
+    line-height: 1.6;
+  }
+
+  header {
+    text-align: center;
+    padding: 70px 20px 40px;
+    background: radial-gradient(ellipse at top, #1a1a20 0%, var(--bg) 70%);
+    border-bottom: 1px solid var(--border);
+  }
+
+  header .kicker {
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    font-size: 13px;
+    color: var(--gold);
+    font-family: "Helvetica", "Arial", sans-serif;
+    margin-bottom: 18px;
+  }
+
+  header h1 {
+    font-size: clamp(2rem, 5vw, 3.4rem);
+    font-weight: 500;
+    letter-spacing: 1px;
+  }
+
+  header p {
+    margin-top: 14px;
+    color: var(--text-muted);
+    max-width: 560px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 15px;
+    font-family: "Helvetica", "Arial", sans-serif;
+  }
+
+  main {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 50px 24px 80px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    gap: 28px;
+  }
+
+  .card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-6px);
+    border-color: var(--gold);
+    box-shadow: 0 12px 32px rgba(201, 169, 98, 0.12);
+  }
+
+  .card-image {
+    position: relative;
+    aspect-ratio: 1 / 1;
+    background: linear-gradient(145deg, #1e1e24, #121216);
+    overflow: hidden;
+  }
+
+  .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.45s ease;
+  }
+
+  .card:hover .card-image img {
+    transform: scale(1.06);
+  }
+
+  .card-brand {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: rgba(12, 12, 14, 0.85);
+    border: 1px solid var(--gold);
+    color: var(--gold-light);
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-family: "Helvetica", "Arial", sans-serif;
+  }
+
+  .card-body {
+    padding: 20px 20px 22px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  .card h2 {
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    line-height: 1.35;
+  }
+
+  .card p {
+    color: var(--text-muted);
+    font-size: 13.5px;
+    font-family: "Helvetica", "Arial", sans-serif;
+    flex: 1;
+  }
+
+  .card-footer {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-top: 18px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+  }
+
+  .price {
+    font-size: 19px;
+    color: var(--gold-light);
+    font-weight: 600;
+  }
+
+  .price small {
+    font-size: 12px;
+    color: var(--text-muted);
+    font-weight: 400;
+    margin-left: 4px;
+  }
+
+  .category {
+    font-size: 11px;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: "Helvetica", "Arial", sans-serif;
+  }
+
+  footer {
+    text-align: center;
+    padding: 30px 20px 50px;
+    color: var(--text-muted);
+    font-size: 13px;
+    font-family: "Helvetica", "Arial", sans-serif;
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="kicker">Curated Collection</div>
+  <h1>Beauty &amp; Fragrance</h1>
+  <p>Fifteen hand-selected essentials in skincare, makeup, haircare, and fine fragrance.</p>
+</header>
+
+<main>
+  <div class="grid">
+
+    <article class="card">
+      <div class="card-image">
+        <span class="card-brand">Pupa Milano</span>
+        <img src="https://www.storeakmedia.com/storeak-erp/Storeas/326/images/items/928/017/2636c506-4526-4ea5-9725-ba5d5451d43d_View.png" alt="Pleasure Lip Oil 001">
+      </div>
+      <div class="card-body">
+        <h2>Pleasure Lip Oil 001, 5 ml</h2>
+        <p>Nourishing lip oil that enhances lip shine with a 3D optical effect. Rich and smooth yet light and non-sticky, with a watermelon flavor enriched by elasticity-enhancing watermelon seed oil.</p>
+        <div class="card-footer">
+          <span class="price">25,000 <small>IQD</small></span>
+          <span class="category">Makeup</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-image">
+        <span class="card-brand">Chanel</span>
+        <img src="https://www.storeakmedia.com/storeak-erp/Storeas/326/images/items/135/115/d38741e1-1ff3-49f7-b44c-3c818133d5f4_View.jpeg" alt="Bleu De Chanel L'Exclusif Parfum">
+      </div>
+      <div class="card-body">
+        <h2>Bleu De Chanel L'Exclusif Parfum</h2>
+        <p>An elegant aromatic fragrance for men. Fragrance notes: amber, woods, labdanum, and sandalwood.</p>
+        <div class="card-footer">
+          <span class="price">300,000 <small>IQD</small></span>
+          <span class="category">Fragrance</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-image">
+        <span class="card-brand">Seapuri</span>
+        <img src="https://www.storeakmedia.com/storeak-erp/Storeas/326/images/items/621/811/a19dee45-ca63-4d15-a718-35f613d2938a_View.jpeg" alt="Seapuri Scalpy Hair Serum">
+      </div>
+      <div class="card-body">
+        <h2>Seapuri Scalpy Hair Serum, 20 ml</h2>
+        <p>A lightweight, non-greasy serum that treats hair loss, strengthens hair roots, and promotes long-term scalp health.</p>
+        <div class="card-footer">
+          <span class="price">30,000 <small>IQD</small></span>
+          <span class="category">Haircare</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-image">
+        <span class="card-brand">Ayten</span>
+        <img src="https://www.storeakmedia.com/storeak-erp/Storeas/326/images/items/156/616/257d5f97-74de-4fb9-8faa-7d4b3a70855e_View.jpeg" alt="Brow Styling Gel With Peptides">
+      </div>
+      <div class="card-body">
+        <h2>Brow Styling Gel With Peptides, 15 ml</h2>
+        <p>Give your brows a sleek, all-day shape. An innovative peptide-enriched formula precisely holds hairs in place while promoting healthier, more manageable brow growth over time.</p>
+        <div class="card-footer">
+          <span class="price">15,000 <small>IQD</small></span>
+          <span class="category">Makeup</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-image">
+        <span class="card-brand">Ayten</span>
+        <img src="https://www.storeakmedia.com/storeak-erp/Storeas/326/images/items/294/714/4abf82aa-c25d-4e22-b366-aad79ed836aa_View.jpeg" alt="Limitless Mascara">
+      </div>
+      <div class="card-body">
+        <h2>Limitless Mascara, 10 ml</h2>
+        <p>Discover the power of attraction with a mascara designed to enhance both length and volume, with a precise, curved brush and lightweight formula for lashes that last all day without clumping or smudging.</p>
+        <div class="card-footer">
+          <span class="price">15,000 <small>IQD</small></span>
+          <span class="category">Makeup</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-image">
+        <span class="card-brand">Ayten</span>
+        <img src="https://www.storeakmedia.com/storeak-erp/Storeas/326/images/items/864/746/89d992f2-a0fc-4d67-834c-516eb9da6d1c_View.jpeg" alt="Eyebrow Serum">
+      </div>
+      <div class="card-body">
+        <h2>Eyebrow Serum, 5 ml</h2>
+        <p>Get thicker, longer eyebrows with this clear gel serum enriched with panthenol, green tea water, five types of hyaluronic acid, peptides, and vitamins. It nourishes hair follicles for a healthy, full, vibrant look.</p>
+        <div class="card-footer">
+          <span class="price">18,000 <small>IQD</small></span>
+          <span class="category">Makeup</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-image">
+        <span class="card-brand">Argan Deluxe</span>
+        <img src="https://www.storeakmedia.com/storeak-erp/Storeas/326/images/items/852/650/13cad4f5-663e-4272-8b84-3045ccfa90fb_View.jpeg" alt="Argan Oil Conditioner 300 ml">
+      </div>
+      <div class="card-body">
+        <h2>Argan Oil Conditioner, 300 ml</h2>
+        <p>A formula infused with argan oil provides instant nourishment and adds softness and suppleness to hair, protecting fibers against dryness and environmental damage. Suitable for all hair types.</p>
+        <div class="card-footer">
+          <span class="price">7,750 <small>IQD</small></span>
+          <span class="category">Haircare</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-image">
+        <span class="card-brand">Golden Rose</span>
+        <img src="https://www.storeakmedia.com/storeak-erp/Storeas/326/images/items/085/403/0aa7f8d7-609f-497e-8d3f-c5aaf46821af_View.jpeg" alt="Roll On Lipgloss Strawberry">
+      </div>
+      <div class="card-body">
+        <h2>Roll On Lipgloss Strawberry</h2>
+        <p>Strawberry-flavored roll-on lip gloss gives lips a delicious taste, prevents dryness, moisturizes, and lends a shiny, attractive look.</p>
+        <div class="card-footer">
+          <span class="price">3,500 <small>IQD</small></span>
+          <span class="category">Makeup</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-image">
+        <span class="card-brand">Rituals</span>
+        <img src="https://www.storeakmedia.com/storeak-erp/Storeas/326/images/items/107/862/9eb7109d-38be-4dc4-9b4b-09d1c087c011_View.jpeg" alt="Ultra Nourishing Shower Oil">
+      </div>
+      <div class="card-body">
+        <h2>Ultra Nourishing Shower Oil, 200 ml</h2>
+        <p>Awaken your inner harmony with this nourishing bath oil enriched with Indian rose, sweet almond oil, moringa oil, and coconut oil. It transforms into a silky lather, leaving skin soft and beautiful.</p>
+        <div class="card-footer">
+          <span class="price">19,000 <small>IQD</small></span>
+          <span class="category">Body Care</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-image">
+        <span class="card-brand">Dermolab</span>
+        <img src="https://www.storeakmedia.com/storeak-erp/Storeas/326/images/items/074/117/4e7b3a79-888b-4195-9683-d4f80d4b082c_View.jpeg" alt="Dermolab SPF 50 Sunscreen">
+      </div>
+      <div class="card-body">
+        <h2>Advanced Protection SPF 50, 50 ml</h2>
+        <p>A light, non-greasy sunscreen that combines UV filters and soothing actives, providing broad-spectrum protection against UVA, UVB, and infrared rays for the most sensitive skin.</p>
+        <div class="card-footer">
+          <span class="price">15,500 <small>IQD</small></span>
+          <span class="category">Skincare</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-image">
+        <span class="card-brand">Clarins</span>
+        <img src="https://www.storeakmedia.com/storeak-erp/Storeas/326/images/items/024/905/41f8fce2-8c0a-49bc-ab1e-f2e9f1ab06dd_View.jpeg" alt="Travel Exclusive Make Up Palette">
+      </div>
+      <div class="card-body">
+        <h2>Travel Exclusive Make Up Palette</h2>
+        <p>This beautiful travel palette contains all the makeup essentials: mini perfect mascara 3 ml, lip comfort oil 2.8 ml, 6 eyeshadows, compact powder, and blush, in a lovely travel bag.</p>
+        <div class="card-footer">
+          <span class="price">115,500 <small>IQD</small></span>
+          <span class="category">Makeup</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-image">
+        <span class="card-brand">Bloom Dead Sea Life</span>
+        <img src="https://www.storeakmedia.com/storeak-erp/Storeas/326/images/items/793/175/a2cccabb-e7bf-4fe9-8762-90fb72abc0b5_View.jpeg" alt="Bloom Facial Tonic">
+      </div>
+      <div class="card-body">
+        <h2>Bloom Facial Tonic, 100 ml</h2>
+        <p>A gentle toner enriched with Dead Sea minerals that removes lingering impurities, rehydrates, and leaves skin refreshed and balanced. Suitable for all skin types, including sensitive skin.</p>
+        <div class="card-footer">
+          <span class="price">20,000 <small>IQD</small></span>
+          <span class="category">Skincare</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-image">
+        <span class="card-brand">Bloom Dead Sea Life</span>
+        <img src="https://www.storeakmedia.com/storeak-erp/Storeas/326/images/items/528/244/f6fedf89-ed84-42cc-916b-b3f6a225205f_View.jpeg" alt="Sun Block SPF 30">
+      </div>
+      <div class="card-body">
+        <h2>Sun Block SPF 30, 100 ml</h2>
+        <p>Combines the natural richness of Dead Sea minerals with effective sun protection. Its lightweight, non-greasy formula absorbs quickly without white residue, ideal for daily use on all skin types.</p>
+        <div class="card-footer">
+          <span class="price">30,000 <small>IQD</small></span>
+          <span class="category">Skincare</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-image">
+        <span class="card-brand">Sol De Janeiro</span>
+        <img src="https://www.storeakmedia.com/storeak-erp/Storeas/326/images/items/808/482/46608bc3-42bf-478f-b071-ed89dc8894f1_View.jpeg" alt="Cheirosa 59 Perfume Mist">
+      </div>
+      <div class="card-body">
+        <h2>Cheirosa 59 Perfume Mist</h2>
+        <p>Top notes of velvety plum and candied violet, middle notes of vanilla orchid and whipped amber, base notes of transparent sandalwood and refreshing vetiver.</p>
+        <div class="card-footer">
+          <span class="price">45,000 <small>IQD</small></span>
+          <span class="category">Fragrance</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-image">
+        <span class="card-brand">Hugo Boss</span>
+        <img src="https://www.storeakmedia.com/storeak-erp/Storeas/326/images/items/976/083/0cf6d574-fcee-4f75-8f41-1297cd84d205_View.png" alt="Bold Citrus EDP">
+      </div>
+      <div class="card-body">
+        <h2>Bold Citrus EDP, 100 ml</h2>
+        <p>A woody citrus fragrance for men. Top notes of lemon and bergamot, middle of Bourbon geranium and elemi resin, base of vetiver and patchouli.</p>
+        <div class="card-footer">
+          <span class="price">120,000 <small>IQD</small></span>
+          <span class="category">Fragrance</span>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</main>
+
+<footer>
+  Curated from the VendorProducts catalogue &middot; Prices in Iraqi Dinar (IQD)
+</footer>
+
+</body>
+</html>
